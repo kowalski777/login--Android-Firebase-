@@ -1,9 +1,13 @@
 # login
- login Android
+ login/register Android
  
  Un simple registro de usuario desde Android a Firebase
  
- https://console.firebase.google.com/u/0/project/login-android-4c0c7/authentication/users
+IMPORTANTE SE NECESITA DESCARGAR EL ARCHIVO (google-services.json) 
+DE GOOGLE SERVICES JSON QUE CORRESPONDA A TU PROYECTO FIREBASE 
+Y PEGARLO DENTRO DE LA CARPETA "APP"
+
+
  
  
  
