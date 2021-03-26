@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText mEditTexEmail;
     private EditText mEditTextPassword;
     private Button mButtonRegister;
+    private Button mButtonSendToLogin;
 
     //VARIABLE DE LOS DATOS QUE VAMOS A REGISTRAR
     private String name = "";
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mEditTexEmail = (EditText) findViewById(R.id.editTextEmail);
         mEditTextPassword = (EditText) findViewById(R.id.editTextPassword);
         mButtonRegister = (Button) findViewById(R.id.btnRegister);
+        mButtonSendToLogin = (Button) findViewById(R.id.btnSendToLogin);
 
         mButtonRegister.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -74,6 +76,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        mButtonSendToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                //finish();
+            }
+        });
+
+
 
     }
 
@@ -109,6 +121,16 @@ public class MainActivity extends AppCompatActivity {
            }
 
         });
+
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        if (mAuth.getCurrentUser() != null){
+            startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+            finish();
+        }
 
     }
 

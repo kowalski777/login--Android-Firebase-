@@ -9,10 +9,30 @@
     tools:context=".ProfileActivity">
 
     <TextView
+        android:id="@+id/textViewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textAlignment="center"
-        android:text="Estas En La Pantalla de Profile"/>
+        android:text="Nombre de Usuario"/>
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:text="Email de Usuario"/>
+    
+    <Button
+        android:id="@+id/btnSignout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesion"
+        android:layout_margin="20dp"
+        android:background="@color/design_default_color_primary"
+        android:textColor="@color/white"/>
+
 
 </LinearLayout>

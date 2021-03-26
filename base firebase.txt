@@ -1,1 +1,11 @@
-https://console.firebase.google.com/u/0/project/login-android-4c0c7/authentication/users
+gmail: lp.bit.app@gmail.com
+pass: LasPiedras2020
+
+---------------------Almacenar en Authentication y en Realtime Database -------------------------------
+
+https://console.firebase.google.com/u/0/project/login-android-4c0c7/authentication/users 
+ 
+https://console.firebase.google.com/u/0/project/lp-app-d98ae/database/lp-app-d98ae-default-rtdb/data
+
+-------------------------------------------------------------------------------------------------------
+
