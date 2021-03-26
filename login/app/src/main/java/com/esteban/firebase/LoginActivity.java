@@ -20,12 +20,13 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mEditTexEmail;
     private EditText mEditTextPassword;
     private Button mButtonLogin;
+    private Button mButtonResetPassword;
 
     //VARIABLE DE LOS DATOS QUE VAMOS A LOGUEAR
     private String email = "";
     private String password = "";
 
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
         mEditTexEmail = (EditText) findViewById(R.id.editTextEmail);
         mEditTextPassword = (EditText) findViewById(R.id.editTextPassword);
         mButtonLogin = (Button) findViewById(R.id.btnLogin);
+        mButtonResetPassword = (Button) findViewById(R.id.btnSendToResetPassword);
+
 
 
         mButtonLogin.setOnClickListener(new View.OnClickListener(){
@@ -54,10 +57,16 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
+        mButtonResetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this , ResetPasswordActivity.class));
+            }
+        });
     }
 
     private void loginUser(){
-        mAuth = FirebaseAuth.getInstance();
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
